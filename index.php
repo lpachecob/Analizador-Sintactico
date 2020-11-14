@@ -1,3 +1,6 @@
+<?php
+include 'conf.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +21,7 @@
     <!-- Custom styles for this template-->
     <link href="public/css/sb-admin-2.min.css" rel="stylesheet">
 
-    <title>Analizador lexico</title>
+    <title>Analizador Sintáctico</title>
 
 </head>
 
@@ -31,7 +34,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="https://lexico.lpachecob.com/">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?php echo $home; ?>">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-users"></i>
                 </div>
