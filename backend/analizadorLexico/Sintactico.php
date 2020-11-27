@@ -25,6 +25,6 @@ foreach ($palabras as $clave => $valor) {
     }
 }
 if ($vosActiva) {
-    echo 'El Parrafo está en voz Activa';
+    echo 'La oración está en voz Activa';
 }
 //Incluimos las clases del analizador.
