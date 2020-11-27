@@ -52,7 +52,9 @@ if (empty($url['query'])) {
                 ?>
             </div>
             <div class="col">
-                <p>sugerencias</p>
+                <?php
+                include 'backend/analizadorLexico/Sugerencias.php';
+                ?>
             </div>
         </div>
     <?php
