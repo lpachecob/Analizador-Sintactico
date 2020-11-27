@@ -9,13 +9,13 @@ fclose($fp);
 $palabras = explode(" ", preg_replace("/[\r\n|\n|\r]+/", " ", trim($txt)));
 
 foreach ($palabras as $clave => $valor) {
-    echo $valor;
+    //echo $valor;
 
 
     foreach ($vosPasiva as $key => $busqueda) {
 
         if ($valor == $busqueda) {
-            echo '$ vos pasiva $';
+            
         } else {
             
         }
