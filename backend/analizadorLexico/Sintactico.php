@@ -11,9 +11,6 @@ $vosActiva = true;
 $palabraVosPasiva = array(null);
 foreach ($palabras as $clave => $valor) {
     //echo $valor;
-
-
-
     foreach ($vosPasiva as $key => $busqueda) {
 
         if ($valor == $busqueda) {
