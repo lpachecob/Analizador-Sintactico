@@ -15,7 +15,7 @@ foreach ($palabras as $clave => $valor) {
     foreach ($vosPasiva as $key => $busqueda) {
 
         if ($valor == $busqueda) {
-            
+            echo '$ vos pasiva $';
         } else {
             
         }
