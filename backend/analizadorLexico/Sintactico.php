@@ -7,8 +7,10 @@ while (!feof($fp)) $txt .= fgets($fp);
 fclose($fp);
 
 $palabras = explode(" ", preg_replace("/[\r\n|\n|\r]+/", " ", trim($txt)));
+
 $vosActiva = true;
 $palabraVosPasiva = array(null);
+
 foreach ($palabras as $clave => $valor) {
     //echo $valor;
     foreach ($vosPasiva as $key => $busqueda) {
@@ -27,4 +29,4 @@ foreach ($palabras as $clave => $valor) {
 if ($vosActiva) {
     echo 'La oración está en voz Activa';
 }
-//Incluimos las clases del analizador.
+
