@@ -18,8 +18,10 @@ foreach ($palabras as $clave => $valor) {
 
         if ($valor == $busqueda) {
             echo 'Se encontro una oracion en voz pasiva';
+            echo '<br>';
             echo 'La coincidencia encontrada es: "' . $valor . '"';
             array_push($palabraVosPasiva, $valor);
+            echo '<br>';
             echo '<br>';
             $vosActiva = false;
         }

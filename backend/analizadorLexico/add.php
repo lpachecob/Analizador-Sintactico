@@ -18,7 +18,7 @@ if (empty($url['query'])) {
                 <form action="?archivo=source.txt" method="POST">
 
                     <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Example textarea</label>
+                        <label for="exampleFormControlTextarea1">Ingresar Nuevo Texto</label>
                         <button name="botoncito" id="botoncito" class="btn btn-primary" onclick="<?php
                                                                                                     if (!empty($_POST['texto'])) {
                                                                                                         $texto = $_POST['texto'];
@@ -29,7 +29,7 @@ if (empty($url['query'])) {
                                                                                                         echo '2';
                                                                                                     }
                                                                                                     ?>
-                        ">Enviar</button>
+                        ">Escribir</button>
                         <?php
                         $fp = fopen("backend/files/" . $nombre, "r");
 
