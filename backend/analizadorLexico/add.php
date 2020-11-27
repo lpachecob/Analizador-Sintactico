@@ -14,24 +14,47 @@ if (empty($url['query'])) {
 
         <br />
         <div class="row">
-            <div class="col">
+            <div class="col-md-3">
+                <form action="?archivo=source.txt" method="POST">
+
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Example textarea</label>
+                        <button name="botoncito" id="botoncito" class="btn btn-primary" onclick="<?php
+                                                                                                    if (!empty($_POST['texto'])) {
+                                                                                                        $texto = $_POST['texto'];
+                                                                                                        $file = fopen("backend/files/source.txt", "w");
+                                                                                                        fwrite($file, $texto);
+                                                                                                        fclose($file);
+                                                                                                    } else {
+                                                                                                        echo '2';
+                                                                                                    }
+                                                                                                    ?>
+                        ">Enviar</button>
+                        <?php
+                        $fp = fopen("backend/files/" . $nombre, "r");
+
+                        $txt = '';
+                        echo '<textarea class="form-control" id="texto" name="texto" rows="5">';
+                        while (!feof($fp)) $txt .= fgets($fp);
+                        fclose($fp);
+                        echo $txt;
+                        echo '</textarea>';
+                        ?>
+
+                    </div>
+
+                </form>
+
+            </div>
+            <div class=" col">
                 <?php
-                //Incluimos las clases del analizador.
-                include("backend/analizadorLexico/stringtokenizer.class.php");
-                include("backend/analizadorLexico/lexer.class.php");
-                $txt = '';
-
-                $fp = fopen("backend/files/" . $nombre, "r");
-                while (!feof($fp)) $txt .= fgets($fp);
-                fclose($fp);
-
-                echo "<b>ENTRADA (backend/files/" . $nombre . ")</b>: <BR /><PRE>" . $txt . "</PRE>";
+                include 'backend/analizadorLexico/Sintactico.php';
                 ?>
             </div>
             <div class="col">
-                <?php $lexer = new Lexer($txt); ?>
+                <p>sugerencias</p>
             </div>
         </div>
-    </div>
-<?php
+    <?php
+
 }
